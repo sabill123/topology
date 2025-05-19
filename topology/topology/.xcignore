@@ -1,0 +1,71 @@
+# Backend files
+be/
+*.py
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+venv/
+.venv/
+env/
+
+# Python package files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Database files
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Virtual environments
+virtual_env/
+virtualenv/
+
+# Cache
+.cache/
+*.cache
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.coverage.*
+
+# Documentation
+docs/_build/
+*.rst~
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Google Sheets credentials
+client_secret*.json
+molten-nirvana*.json
+credentials.json

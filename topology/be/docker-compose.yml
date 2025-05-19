@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - .:/app
+      - ./credentials:/app/credentials:ro
+    depends_on:
+      - redis
+    networks:
+      - topology-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - topology-network
+    restart: unless-stopped
+
+volumes:
+  redis-data:
+
+networks:
+  topology-network:
+    driver: bridge
